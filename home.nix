@@ -5,7 +5,6 @@ in
 {
   home = {
     packages = with pkgs; [
-      cowsay
       gnumake
       nil
       nixfmt-rfc-style
@@ -16,21 +15,22 @@ in
     inherit username;
     homeDirectory = "/home/${username}";
 
-    file = {
-      "hello.txt" = {
-        text = ''
-          #!/usr/bin/env bash
-
-          echo "Hello, ${username}!"
-          echo '*slaps roof* This script can fit so many lines in it'
-        '';
-        executable = true;
-      };
-    };
-
     stateVersion = "24.11";
   };
   programs = {
     home-manager.enable = true;
+
+    git = {
+      enable = true;
+      lfs.enable = true;
+      userName = "Justin Ang";
+      email = "justinray8823@gmail.com";
+      ignores = [ ".DS_Store" ];
+      extraConfig = {
+        init.defaultBranch = "main";
+        push.autoSetupRemote = true;
+        pull.rebase = true;
+      };
+    };
   };
 }
