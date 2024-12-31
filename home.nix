@@ -24,7 +24,7 @@ in
       enable = true;
       lfs.enable = true;
       userName = "Justin Ang";
-      email = "justinray8823@gmail.com";
+      userEmail = "justinray8823@gmail.com";
       ignores = [ ".DS_Store" ];
       extraConfig = {
         init.defaultBranch = "main";
@@ -32,5 +32,7 @@ in
         pull.rebase = true;
       };
     };
+
+
   };
 }
