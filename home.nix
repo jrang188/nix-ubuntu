@@ -13,6 +13,7 @@ in
       jq
       wget
       curl
+      neovim
 
       # Programming Languages
       fnm
@@ -92,5 +93,7 @@ in
       enableZshIntegration = true;
       useTheme = "tokyonight_storm";
     };
+
+    neovim.enable = true;
   };
 }
