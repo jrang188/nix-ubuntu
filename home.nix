@@ -10,6 +10,7 @@ in
       nixfmt-rfc-style
       fastfetch
       neofetch
+      fnm
     ];
 
     inherit username;
@@ -43,6 +44,7 @@ in
         enable = true;
         plugins = [
           "git"
+          "fnm"
         ];
       };
       syntaxHighlighting.enable = true;
@@ -51,6 +53,9 @@ in
         ssh = "ssh.exe";
         ssh-add = "ssh-add.exe";
       };
+      initExtraBeforeCompInit = ''
+        eval "$(fnm env --use-on-cd --shell zsh)"
+      '';
     };
 
     oh-my-posh = {
