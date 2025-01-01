@@ -26,7 +26,7 @@ in
       kubectl
       kubectx
       k9s
-      helm
+      kubernetes-helm
       tenv
       awscli2
       google-cloud-sdk
