@@ -13,6 +13,10 @@ in
       jq
       wget
       curl
+      fzf
+      fd
+      ripgrep
+      lazygit
 
       # Programming Languages
       fnm
