@@ -24,5 +24,7 @@
           modules = [ ./home.nix ];
         };
       };
+      formatter.${system} = pkgs.nixfmt-rfc-style;
     };
+
 }

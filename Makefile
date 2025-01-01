@@ -6,3 +6,7 @@ update:
 .PHONY: clean
 clean:
 	nix-collect-garbage -d
+
+.PHONY: flake-update
+flake-update:
+	nix flake update
