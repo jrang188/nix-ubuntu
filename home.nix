@@ -81,7 +81,7 @@ in
         ssh-add = "ssh-add.exe";
       };
       # The command for UV can be removed when oh-my-zsh nixpkg is updated
-      initExtraBeforeCompInit = ''
+      initExtra = ''
         eval "$(fnm env --use-on-cd --shell zsh)"
         eval "$(uv generate-shell-completion zsh)"
       '';
