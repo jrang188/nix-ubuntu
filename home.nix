@@ -13,6 +13,7 @@ in
 
       # NodeJS Development
       fnm
+      pnpm
     ];
 
     inherit username;
