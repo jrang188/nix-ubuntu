@@ -10,6 +10,8 @@ in
       nixfmt-rfc-style
       fastfetch
       neofetch
+
+      # NodeJS Development
       fnm
     ];
 
