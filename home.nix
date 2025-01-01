@@ -83,7 +83,7 @@ in
       # The command for UV can be removed when oh-my-zsh nixpkg is updated
       initExtraBeforeCompInit = ''
         eval "$(fnm env --use-on-cd --shell zsh)"
-        echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+        eval "$(uv generate-shell-completion zsh)"
       '';
     };
 
