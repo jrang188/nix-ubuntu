@@ -10,6 +10,9 @@ in
       nixfmt-rfc-style
       fastfetch
       neofetch
+      jq
+      wget
+      curl
 
       # Programming Languages
       fnm
@@ -25,10 +28,9 @@ in
       k9s
       helm
       tenv
-      jq
       awscli2
       google-cloud-sdk
-      pulumi
+      pulumi-bin
     ];
 
     inherit username;
