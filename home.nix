@@ -17,6 +17,7 @@ in
       fd
       ripgrep
       lazygit
+      stow
 
       # Programming Languages
       fnm
