@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 let
   username = "sirwayne";
 in
@@ -11,12 +11,24 @@ in
       fastfetch
       neofetch
 
-      # NodeJS & Bun Development
+      # Programming Languages
       fnm
       bun
-
-      # Python
       uv
+      go
+      clang
+      rustup
+
+      # DevOps
+      kubectl
+      kubectx
+      k9s
+      helm
+      tenv
+      jq
+      awscli2
+      google-cloud-sdk
+      pulumi
     ];
 
     inherit username;
@@ -51,6 +63,12 @@ in
         plugins = [
           "git"
           "fnm"
+          "bun"
+          "kubectl"
+          "helm"
+          "terraform"
+          "aws"
+          "ubuntu"
           # "uv" oh-my-zsh plugin is not installed in latest nixpkg version
         ];
       };
@@ -72,6 +90,5 @@ in
       enableZshIntegration = true;
       useTheme = "tokyonight_storm";
     };
-
   };
 }
