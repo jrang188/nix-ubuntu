@@ -11,8 +11,12 @@ in
       fastfetch
       neofetch
 
-      # NodeJS Development
+      # NodeJS & Bun Development
       fnm
+      bun
+
+      # Python
+      uv
     ];
 
     inherit username;
@@ -47,6 +51,7 @@ in
         plugins = [
           "git"
           "fnm"
+          # "uv" oh-my-zsh plugin is not installed in latest nixpkg version
         ];
       };
       syntaxHighlighting.enable = true;
@@ -55,8 +60,10 @@ in
         ssh = "ssh.exe";
         ssh-add = "ssh-add.exe";
       };
+      # The command for UV can be removed when oh-my-zsh nixpkg is updated
       initExtraBeforeCompInit = ''
         eval "$(fnm env --use-on-cd --shell zsh)"
+        echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
       '';
     };
 
