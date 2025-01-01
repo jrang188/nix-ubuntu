@@ -29,10 +29,35 @@ in
       extraConfig = {
         init.defaultBranch = "main";
         push.autoSetupRemote = true;
-        pull.rebase = true;
+        pull.ff = "only";
+        core.sshCommand = "ssh.exe";
       };
     };
 
+    ## MUST SET ZSH AS DEFAULT SHELL
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autocd = true;
+      oh-my-zsh = {
+        enable = true;
+        plugins = [
+          "git"
+        ];
+      };
+      syntaxHighlighting.enable = true;
+      autosuggestion.enable = true;
+      shellAliases = {
+        ssh = "ssh.exe";
+        ssh-add = "ssh-add.exe";
+      };
+    };
+
+    oh-my-posh = {
+      enable = true;
+      enableZshIntegration = true;
+      useTheme = "tokyonight_storm";
+    };
 
   };
 }
