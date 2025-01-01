@@ -94,6 +94,5 @@ in
       useTheme = "tokyonight_storm";
     };
 
-    neovim.enable = true;
   };
 }
