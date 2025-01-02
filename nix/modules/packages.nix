@@ -18,6 +18,7 @@
     zip
     unzip
     tree
+    gh
 
     # Programming Languages
     fnm

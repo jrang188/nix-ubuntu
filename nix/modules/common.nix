@@ -1,8 +1,8 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 let
   # Helper to detect Darwin (Future Proofing)
-  isDarwin = builtins.elem config.system [
+  isDarwin = builtins.elem pkgs.stdenv.hostPlatform.system [
     "x86_64-darwin"
     "aarch64-darwin"
   ];
