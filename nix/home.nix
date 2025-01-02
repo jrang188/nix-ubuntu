@@ -20,6 +20,7 @@ in
       stow
       zip
       unzip
+      tree
 
       # Programming Languages
       fnm
