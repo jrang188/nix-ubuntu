@@ -9,3 +9,4 @@ chsh -s $(which zsh)
 
 ## Notes
 - Setting fonts is not necessary because you are using the Windows Host fonts
+- In Ubuntu, `python3-venv` is needed by Mason.nvim
