@@ -18,6 +18,8 @@ in
       ripgrep
       lazygit
       stow
+      zip
+      unzip
 
       # Programming Languages
       fnm
