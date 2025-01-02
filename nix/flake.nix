@@ -20,7 +20,14 @@
       homeConfigurations = {
         sirwayne = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ];
+          modules = [
+            ./modules/common.nix
+            ./modules/packages.nix
+            ./modules/git.nix
+            ./modules/zsh.nix
+            ./modules/oh-my-posh.nix
+            ./modules/neovim.nix
+          ];
         };
       };
       formatter.${system} = pkgs.nixfmt-rfc-style;
