@@ -16,7 +16,8 @@
         "helm"
         "terraform"
         "aws"
-        "ubuntu"
+        # Use 'macos' if isDarwin, else 'ubuntu'
+        (if config.isDarwin then "macos" else "ubuntu")
         # "uv" oh-my-zsh plugin is not installed in latest nixpkg version
       ];
     };
