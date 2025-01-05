@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ username, config, lib, pkgs, ... }:
 
 let
   # Helper to detect Darwin (Future Proofing)
@@ -7,17 +7,11 @@ let
     "aarch64-darwin"
   ];
 
-  username = "sirwayne";
-
   homeDir = if isDarwin then "/Users/${username}" else "/home/${username}";
 in
 {
   # Provide these as a top-level config options or bring them
   # into the rest of your modules via `config.username`, etc.
-  options.username = lib.mkOption {
-    type = lib.types.str;
-    default = username;
-  };
 
   options.isDarwin = lib.mkOption {
     type = lib.types.bool;
@@ -30,7 +24,7 @@ in
   };
 
   config = {
-    home.username = config.username;
+    home.username = username;
     home.homeDirectory = config.homeDir;
     home.stateVersion = "24.11";
 

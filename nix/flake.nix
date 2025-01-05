@@ -15,11 +15,16 @@
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
+
+      specialArgs = {
+        username = "sirwayne";
+      };
     in
     {
       homeConfigurations = {
         sirwayne = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = specialArgs;
           modules = [
             ./modules/common.nix
             ./modules/packages.nix
