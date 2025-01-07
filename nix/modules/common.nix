@@ -1,4 +1,10 @@
-{ username, config, lib, pkgs, ... }:
+{
+  username,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   # Helper to detect Darwin (Future Proofing)
